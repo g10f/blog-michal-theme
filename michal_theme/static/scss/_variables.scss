@@ -1,0 +1,11 @@
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+//$font-family-sans-serif: Barlow, Arial, Helvetica, sans-serif;
+//$font-size-base: 1.2rem; //.875rem;
+
+
+$brand:                 #1aa179;
+$brand-light:           tint-color($brand, 60%);
+$brand-red:             #b83b40;
+$primary:               $brand;
