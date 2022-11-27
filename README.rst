@@ -1,0 +1,1 @@
+Simple Theme for a Wagtail Blog
