@@ -1,14 +1,14 @@
-import os
+import pathlib
 
 from setuptools import setup, find_packages
 
 from michal_theme import __version__
 
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
-    README = readme.read()
-
 # allow setup.py to be run from any path
-os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+here = pathlib.Path(__file__).parent.resolve()
+
+# Get the long description from the README file
+long_description = (here / "README.rst").read_text(encoding="utf-8")
 
 setup(
     name='blog-michal-theme',
@@ -17,7 +17,7 @@ setup(
     license='BSD License',
     packages=find_packages(),
     description='A Simple Theme.',
-    long_description=README,
+    long_description=long_description,
     url='https://michal.g10f.de',
     author='Gunnar Scherf',
     author_email='mail@g10f.de',

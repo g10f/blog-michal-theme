@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-include docs *
+recursive-include michal_theme/locale *
+recursive-include michal_theme/static *
+recursive-include michal_theme/templates *
