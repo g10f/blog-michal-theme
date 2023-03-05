@@ -31,11 +31,4 @@ function copyJavaScriptFiles() {
         .pipe(gulp.dest('./michal_theme/static/js/vendor'))
 }
 
-function copyFontFiles() {
-    return gulp.src([
-        './node_modules/bootstrap-icons/font/*.css',
-        './node_modules/bootstrap-icons/font/**//fonts/*.*',
-    ]).pipe(gulp.dest('./michal_theme/static/font'))
-}
-
-exports.default = parallel(buildStyles, buildMinStyles, copyJavaScriptFiles, copyFontFiles);
+exports.default = parallel(buildStyles, buildMinStyles, copyJavaScriptFiles);
