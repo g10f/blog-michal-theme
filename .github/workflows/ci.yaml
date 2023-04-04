@@ -15,7 +15,7 @@ jobs:
         id: version
         run: |
           set -x
-          echo "VERSION=$(python apps/version.py)" >> $GITHUB_OUTPUT
+          echo "VERSION=$(python version.py)" >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
