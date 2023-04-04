@@ -23,12 +23,5 @@ function buildMinStyles() {
         .pipe(gulp.dest(config.buildCss))
 }
 
-function copyJavaScriptFiles() {
-    return gulp.src([
-        './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
-        './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map',
-        './node_modules/jquery/dist/jquery.min.js'])
-        .pipe(gulp.dest('./michal_theme/static/js/vendor'))
-}
 
-exports.default = parallel(buildStyles, buildMinStyles, copyJavaScriptFiles);
+exports.default = parallel(buildStyles, buildMinStyles);
