@@ -77,14 +77,12 @@ jobs:
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
-          key: dummy
+          key: ${{ secrets.SSH_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
           config: |
             Host g10f-blog-michal
               ProxyCommand sh -c "aws ssm start-session --region eu-central-1 --target i-0791c2c972a049104 --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
               User ubuntu
-              PubkeyAuthentication no
-#              IdentityFile ~/.ssh/id_rsa
 
       - uses: actions/setup-python@v4
         with:
