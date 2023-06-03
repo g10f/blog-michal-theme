@@ -1,4 +1,4 @@
-FROM ghcr.io/g10f/blog-site:1.2.6
+FROM ghcr.io/g10f/blog-site:1.2.7
 
 COPY michal_theme michal_theme
 ENV DJANGO_SETTINGS_MODULE=blogsite.settings.production
