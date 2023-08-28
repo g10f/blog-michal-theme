@@ -12868,7 +12868,7 @@ html {
 }
 
 .nav-link.active {
-  background-color: #e9ecef;
+  background-color: var(--bs-secondary-bg);
 }
 
 @media (max-width: 575.98px) {
